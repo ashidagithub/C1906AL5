@@ -5,8 +5,8 @@
 
 # 要点：初步理解列表，了解断行
 
-import sys
-import io
+# import sys
+# import io
 import random
 
 # 解决输出显示汉字乱码的问题
@@ -14,6 +14,7 @@ import random
 #print (sys.stdout.encoding)  # 确认当前的控制台显示字符的编码
 
 # 练习一， 指定挑选一个名并显示
+print('\n---华丽分割线---练习（1）---')
 given_words = ["致浩","明云","浩烨","兆忠","予忻","顺雨","尚扬","俊祥","语禅","予浩"]
 print("%s\n" % (given_words[0]))
 
@@ -21,32 +22,41 @@ pos = 5 # 位置
 print("我要第 (%d) 个名，它是 %s\n" % (pos + 1, given_words[pos])) # 要注意以 0 开头
 
 # 练习二： 遍历所有的姓
+print('\n---华丽分割线---练习（2）---')
 print("所有的名： ", end="")
 for name in given_words:
     print("%s " % name, end="")
 print("\n")
 
 # 练习三：随机挑选一个姓，产生10遍以上
+print('\n---华丽分割线---练习（3）---')
 times = 10
 for i in range(times):
     pos = random.randint(0, len(given_words)-1)
     print("随机产生第 (%d) 个名，它是 %s" % (i, given_words[pos])) # 要注意以 0 开头
 
-# 练习四，更改列表中某一个元素
-given_words[0] = "改我的名"
+# 练习四，向列表追加元素
+print('\n---华丽分割线---练习（3）---')
+# 在列表末尾添加一个元素
+given_words.append('改我的名')
+
+# 在列表末尾添加 n 个元素
+given_words.extend(['父亲的名','母亲的名'])
+
 print("所有的名： ", end="")
 for name in given_words:
     print("%s " % name, end="")
 print("\n")
 
 # 练习四： 随机生成2个字的名 random.sample
+print('\n---华丽分割线---练习（4）---')
 given_words1 = [ \
 "潮","彻","郴","琛","澈","臣","辰","晨","承","盛","程", \
 "池","炽","冲","重","崇","绸","畴","酬","筹","楚","处", \
 ]
 times = 5
 for w in range(times):
-    print("\n随机取名-第(%d)个自组名：" % (w + 1), end="")
+    print("随机取名-第(%d)个自组名：" % (w + 1), end="")
     given_name_num = random.randint(1, 2)
     """
     # 第一种方法：用 pos 定位
@@ -61,9 +71,10 @@ for w in range(times):
         new_name = random.sample(given_words1, 1)
     else:
         new_name = random.sample(given_words1, 2)
-    print(new_name, end="")
+    print(new_name)
 
 # 练习五：random.choice
+print('\n---华丽分割线---练习（5）---')
 given_words2 = [ \
 "致浩","明云","浩烨","兆忠","予忻","顺雨","尚扬","俊祥","语禅","予浩", \
 "童兆","可然","业尚","抒霄","如海","聿彦","德容","政斌","羽凡","沛林", \
