@@ -30,7 +30,7 @@ for i in range(3):
 print('\n---华丽分割线---练习（4）---')
 family_words = ( "赵","钱","孙","李","周","吴","郑","王" )
 
-times = 50
+times = 10
 print('总共有 %d 个姓供挑选，计划挑选 %d 次' % (len(family_words), times))
 for i in range(times):
     pos = random.randint(0, len(family_words)-1)
