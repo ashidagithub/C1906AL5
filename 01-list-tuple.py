@@ -7,6 +7,8 @@
 # 掌握基本的赋值，加减乘除运算，输入及输出方法
 # 掌握 print 代入模式
 
+import random
+
 # -------------------------------
 # 练习一：定义列表和元组
 # 关于列表的赋值操作示例
@@ -52,3 +54,12 @@ pos = 0
 for v in List1:
     print("取出列表的第 %d 个 值，它是 %s" % (pos, v) )
     pos = pos + 1
+
+# 练习五
+# 随机取出一个元素
+print('\n---华丽分割线---练习（5）---')
+for i in range(1,5):
+    # fbb
+    s = random.choice(List1)
+    print (s)
+    # fbe
